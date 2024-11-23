@@ -31,13 +31,13 @@ function Header() {
                 role="button"
                 aria-expanded="false"
               >
-                <img
+               <Link to={'/dashboard'}> <img
                   src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
                   class="rounded-circle"
                   height="35"
                   alt="Black and White Portrait of a Man"
                   loading="lazy"
-                />
+                /></Link>
               </a>
               <ul
                 class="dropdown-menu dropdown-menu-end"
