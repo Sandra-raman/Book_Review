@@ -1,17 +1,20 @@
 import React from 'react'
+import AddReview from '../Components/AddReview'
+import ViewReview from '../Components/ViewReview'
+import UserProfile from '../Components/UserProfile'
 
 function User_Dashboard() {
   return (
     <div>
-      <div className="row">
-        <div className="col-8">
-          <h4>Upload Review</h4>
-          
-        </div>
-        <div className="col-4">
-          Profile
-        </div>
-      </div>
+     <div className="row">
+      <UserProfile/>
+     </div>
+     <div className="row">
+      <AddReview/>
+     </div>
+     <div className="row">
+      <ViewReview/>
+     </div>
     </div>
   )
 }
