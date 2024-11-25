@@ -5,6 +5,7 @@ import Auth from './Pages/Auth'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
 import User_Dashboard from './Pages/User_Dashboard'
+import BookReview from './Pages/BookReview'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <Route path='/register' element={<Auth register/>}/>
       <Route path='/login' element={<Auth/>}/>
       <Route path='/dashboard' element={<User_Dashboard/>}/>
+      <Route path='/bookreview' element={<BookReview/>}/>
     </Routes>
     <Footer/>
     </>
