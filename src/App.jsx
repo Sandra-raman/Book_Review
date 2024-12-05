@@ -7,6 +7,7 @@ import Footer from './Components/Footer'
 import User_Dashboard from './Pages/User_Dashboard'
 import BookReview from './Pages/BookReview'
 
+
 function App() {
 
   return (
@@ -18,8 +19,10 @@ function App() {
       <Route path='/login' element={<Auth/>}/>
       <Route path='/dashboard' element={<User_Dashboard/>}/>
       <Route path='/bookreview' element={<BookReview/>}/>
+      <Route path='*' element={<Home/>}/>
     </Routes>
     <Footer/>
+
     </>
   )
 }

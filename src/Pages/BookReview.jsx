@@ -1,4 +1,5 @@
 import React from 'react'
+import AddReview from '../Components/AddReview'
 
 function BookReview() {
   return (
@@ -27,7 +28,8 @@ function BookReview() {
             Aut vero commodi explicabo corrupti! Repellat eius error fugit commodi iusto corrupti fuga unde. Sit, iure praesentium aperiam assumenda dolores ut labore voluptate eligendi placeat magni eum perferendis deserunt. Sed.</p>
         </div>
 {/* Review Upload */}
-        <h2>Reviews:</h2>
+        <AddReview />
+        <h2 className='mt-3'>Reviews:</h2>
         <div className="row mt-4 ms-3 border me-3 shadow mb-4">
             <div className="col-2 mt-3">
                 <img src="" alt="Book_img" />

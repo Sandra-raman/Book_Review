@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Bokor&family=Dancing+Script:wght@400..700&family=Faculty+Glyphic&family=Lilita+One&family=Lobster&family=Spicy+Rice&display=swap');
+
+span {
+    font-family: "Bokor", system-ui;
+    font-weight: 700;
+    font-style: normal;
+    background-color: rgb(3, 14, 44);
+    color: azure;
+    margin-left: 135px;
+    
+  }
+  
