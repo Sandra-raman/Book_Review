@@ -20,11 +20,13 @@ function AddReview() {
   return (
     <div>
       <hr />
-      <div className="row mt-4">
-        <h5 onClick={toggleOpen} className="text-info">
+     <div className="row mt-4">
+     <div className="col-8 ms-2">
+        <button onClick={toggleOpen} className=" btn btn-info">
           Upload new Review Click here
-        </h5>
+        </button>
       </div>
+     </div>
 
       <MDBModal
         staticBackdrop
