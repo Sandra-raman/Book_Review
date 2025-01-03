@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import ReviewBlock from "../Components/ReviewBlock";
 import { MDBCarousel, MDBCarouselItem } from "mdb-react-ui-kit";
 import {
@@ -7,13 +7,14 @@ import {
   MDBCardTitle,
   MDBCardText,
   MDBCardImage,
-  MDBBtn,
 } from "mdb-react-ui-kit";
 import { Link } from "react-router-dom";
+import { ThemeContext } from "../ContextAPI/ThemeContext";
 
 function Home() {
+  const { theme } = useContext(ThemeContext);
   return (
-    <div>
+    <div className={`home-container ${theme}`}>
       <hr />
       <div className="my-2">
         <span className="fs-3">

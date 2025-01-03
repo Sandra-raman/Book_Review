@@ -1,65 +1,77 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { ThemeContext } from "../ContextAPI/ThemeContext";
+
 function Header() {
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
   return (
     <div>
-      <nav class="navbar navbar-light bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand">Plot Point</a>
-          <form class="d-flex input-group w-auto">
+      <nav className={`navbar navbar-${theme} bg-${theme} shadow`}>
+        <div className="container-fluid">
+          <a className="navbar-brand">Plot Point</a>
+          <form className="d-flex input-group w-auto">
             <input
               type="search"
-              class="form-control rounded"
+              className="form-control rounded"
               placeholder="Search"
               aria-label="Search"
               aria-describedby="search-addon"
             />
-            <span class="input-group-text border-0" id="search-addon">
-              <i class="fas fa-search fs-5 me-3"></i>
+            <span className="input-group-text border-0" id="search-addon">
+              <i className="fas fa-search fs-5 me-3"></i>
             </span>
-            <Link to={'/login'}>
-              <button type="button" class="btn btn-primary px-3 me-2">
+            <Link to={"/login"}>
+              <button type="button" className="btn btn-primary px-3 me-2">
                 Signin
               </button>
             </Link>
-            <div class="dropdown">
+            <div className="dropdown">
               <a
                 data-mdb-dropdown-init
-                class="dropdown-toggle d-flex align-items-center hidden-arrow"
+                className="dropdown-toggle d-flex align-items-center hidden-arrow"
                 href="#"
                 id="navbarDropdownMenuAvatar"
                 role="button"
                 aria-expanded="false"
               >
-               <Link to={'/dashboard'}> <img
-                  src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                  class="rounded-circle"
-                  height="35"
-                  alt="Black and White Portrait of a Man"
-                  loading="lazy"
-                /></Link>
+                <Link to={"/dashboard"}>
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                    className="rounded-circle"
+                    height="35"
+                    alt="Profile"
+                  />
+                </Link>
               </a>
               <ul
-                class="dropdown-menu dropdown-menu-end"
+                className="dropdown-menu dropdown-menu-end"
                 aria-labelledby="navbarDropdownMenuAvatar"
               >
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a className="dropdown-item" href="#">
                     My profile
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a className="dropdown-item" href="#">
                     Settings
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a className="dropdown-item" href="#">
                     Logout
                   </a>
                 </li>
               </ul>
             </div>
+            {/* Dark Mode Button */}
+            <button
+              onClick={toggleTheme}
+              className="btn btn-secondary ms-3"
+            >
+              {theme === "light" ? "Dark" : "Light"} Mode
+            </button>
           </form>
         </div>
       </nav>

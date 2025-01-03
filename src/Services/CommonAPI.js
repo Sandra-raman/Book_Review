@@ -13,3 +13,4 @@ export const CommonAPI=async(httpMethod,url,reqbody,reqHeader)=>{
     .then((response)=>{return response})
     .catch((error)=>{return error})
 }
+

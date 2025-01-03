@@ -1,0 +1,28 @@
+body.light {
+    background-color: white;
+    color: black;
+  }
+  
+  body.dark {
+    background-color: #121212;
+    color: white;
+  }
+  
+  .navbar.light {
+    background-color: #f8f9fa;
+  }
+  
+  .navbar.dark {
+    background-color: #343a40;
+  }
+  
+  .home-container.light {
+    background-color: white;
+    color: black;
+  }
+  
+  .home-container.dark {
+    background-color: #1c1c1c;
+    color: white;
+  }
+  
